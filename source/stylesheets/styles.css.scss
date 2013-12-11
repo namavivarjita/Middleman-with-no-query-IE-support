@@ -1,0 +1,12 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+ 
+/* HTML element (SMACSS base) rules */
+@import "normalize"; // I <3 Normalize.
+ 
+/* Layout rules */
+@import "layout";
+
+body {
+	 font-family: 'noto_serifregular';
+}

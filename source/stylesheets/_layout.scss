@@ -1,0 +1,48 @@
+/* $show-baseline-grid-background: false;
+@if true {
+  $grid-background-baseline-height: $base-line-height;
+  body {
+    @include debug-vertical-alignment;
+  }
+}
+*/
+
+.l-general__main {
+  /* Mobile layout. */
+ 
+  @include breakpoint(555px, $no-query: true) {
+    /* Tablet layout. */
+  }
+ 
+  @include breakpoint(888px, $no-query: true) {
+    /* Desktop layout. */
+  }
+ 
+  @include breakpoint(1111px, $no-query: false) {
+    /* Large desktop layout. */
+  }
+ 
+  @if $legacy-support-for-ie8 {
+    /* Any extra IE8 only styles. */
+
+  }
+}
+
+div {
+  background-color: red;
+  text-align: center;
+  @include breakpoint($small, $no-query: false) {
+    background-color: blue;
+    text-align: right;
+  }
+  @include breakpoint($large, $no-query: true) {
+    background-color: green;
+    text-align: left;
+  }
+  @if $legacy-support-for-ie8 {
+    /* Any extra IE8 only styles. */
+    h1 {
+      color: white;
+    }
+  }
+}

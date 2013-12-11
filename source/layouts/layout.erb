@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title><%= current_page.data.title || "The Middleman" %></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--[if (lt IE 9)]>
+          <%= stylesheet_link_tag "oldie" %>
+        <![endif]-->
+     
+        <!--[if (gte IE 9)|(IEMobile)|(!IE)]><!-->
+          <%= stylesheet_link_tag "styles" %>
+        <!--<![endif]-->
+
+        <%= javascript_include_tag  "modernizr" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <%= yield %>
+    <%= javascript_include_tag  "all" %>
+  </body>
+</html>
